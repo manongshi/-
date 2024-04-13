@@ -3,5 +3,5 @@
       启动文件为 app.py文件
 
       数据库需要联系  
-      ![image](name.jpg)
+      ![pic1](name.jpg)
 
