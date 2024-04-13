@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <input type="text" id="jhm" placeholder="请输入激活码" style="width: 40%;margin-left: 10%;margin-top: 10%;height: 6%;">
+    <button onclick="Kai()">START</button>
+
+    <script>
+        function get_jhm(){
+            return new Promise((resolve,reject)=>{
+                jhm = document.getElementById("jhm").value
+                axios({
+                  method: 'POST',
+                  data:{
+                      data:jhm
+                  },
+                    url: 'http://127.0.0.1:5000/yz',
+                    })
+                      .then(function(res){
+                        resolve(res)
+                      });
+            })
+        }
+        async function Kai(){
+
+            const yz = await get_jhm()
+            console.log(yz)
+            var data = window.localStorage.getItem('key')
+            if(yz['data']['state']==='1'){
+                axios({
+              method: 'POST',
+              data:{
+                  data:data
+              },
+              url: 'http://127.0.0.1:5000/Kai',
+            })
+              .then(function(res){
+                console.log(res)
+              });
+            }
+            else{
+                alert("激活码不可用")
+            }
+
+        }
+    </script>
+</body>
+
+</html>
