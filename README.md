@@ -3,5 +3,6 @@
       启动文件为 app.py文件
 
       数据库需要联系  
-      ![Alt text](https://github.com/manongshi/AnQuan/assets/116415372/bbd2a7c6-de78-4e2d-8b43-fb9b53f0e6c1)
+      
 
+![name](https://github.com/manongshi/AnQuan/assets/116415372/acee4317-2c86-4909-ad4d-bbdbc3f88790)
